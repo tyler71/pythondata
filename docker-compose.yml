@@ -1,0 +1,18 @@
+services:
+  jupyter:
+    image: docker.xyzz.work/pythondata
+    build:
+      context: ./build
+    labels:
+      caddy: ${hostname}
+      caddy.reverse_proxy: "{{upstreams ${port}}}"
+    volumes:
+      - "./data/notebooks:/home/application/data"
+      - "./data/config:/home/application/.jupyter"
+    networks:
+      - caddy
+# Bad vim theme needs this command: jt -t onedork -vim
+
+networks:
+  caddy:
+    external: true
