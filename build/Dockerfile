@@ -1,7 +1,10 @@
 FROM python
 
-RUN apt-get update             \
- && apt-get install -y sqlite3 \
+RUN apt-get update                               \
+ && apt-get install -y sqlite3                   \
+                       texlive-xetex             \
+                       texlive-fonts-recommended \
+                       texlive-plain-generic     \
  && rm -r /var/lib/apt/lists/*
 
 RUN useradd --system --create-home --home-dir /home/application --shell /bin/bash \
