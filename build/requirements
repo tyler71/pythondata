@@ -1,8 +1,9 @@
+boto3
+duckdb
 ipython
 jupyterlab
-scrapy
-pandas
-numpy
-duckdb
-boto3
 nbconvert
+numpy
+pandas
+scipy
+scrapy
