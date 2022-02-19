@@ -1,13 +1,13 @@
 services:
-  jupyter:
-    image: docker.xyzz.work/pythondata
+  pythondata:
+    image: ghcr.io/tyler71/pythondata:latest
     build:
       context: ./build
     labels:
       caddy: ${hostname}
       caddy.reverse_proxy: "{{upstreams ${port}}}"
     volumes:
-      - "./data/notebooks:/home/application/data"
+      - "./data/stored_files:/home/application/data"
       - "./data/config:/home/application/.jupyter"
     networks:
       - caddy

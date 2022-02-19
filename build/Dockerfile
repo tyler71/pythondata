@@ -7,16 +7,12 @@ RUN apt-get update             \
 RUN useradd --system --create-home --home-dir /home/application --shell /bin/bash \
       --gid root --uid 1000 application
 
-RUN pip --no-cache-dir install \
-      ipython                  \
-      jupyterlab               \
-      scrapy                   \
-      pandas                   \
-      numpy
 
 RUN pip install jupyter_contrib_nbextensions \
                 jupyterthemes
 
+COPY ./requirements .
+RUN python -m pip install --no-cache-dir -r requirements
 
 USER application
 
