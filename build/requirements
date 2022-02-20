@@ -9,3 +9,4 @@ scipy
 scrapy
 altair
 vega_datasets
+numba
