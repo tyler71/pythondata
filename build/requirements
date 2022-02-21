@@ -1,12 +1,14 @@
+altair
+bash_kernel
 boto3
 duckdb
 ipython
 jupyterlab
 nbconvert
+nodejs
+numba
 numpy
 pandas
 scipy
 scrapy
-altair
 vega_datasets
-numba

@@ -8,6 +8,7 @@ services:
       caddy.reverse_proxy: "{{upstreams ${port}}}"
     volumes:
       - "./data/stored_files:/home/application/data"
+      - "./data/extensions:/usr/local/share/jupyter/lab/extensions"
       - "./data/config:/home/application/.jupyter"
     networks:
       - caddy

@@ -5,6 +5,8 @@ RUN apt-get update                               \
                        texlive-xetex             \
                        texlive-fonts-recommended \
                        texlive-plain-generic     \
+                       nodejs                    \
+                       npm                       \
  && rm -r /var/lib/apt/lists/*
 
 RUN useradd --system --create-home --home-dir /home/application --shell /bin/bash \
@@ -17,15 +19,18 @@ RUN pip install jupyter_contrib_nbextensions \
 COPY ./requirements .
 RUN python -m pip install --no-cache-dir -r requirements
 
+RUN chown application -R /usr/local/share/jupyter/lab
+
 USER application
 
 RUN mkdir -p $(jupyter --data-dir)/nbextensions \
  && cd $(jupyter --data-dir)/nbextensions \
  && git clone --depth=1 https://github.com/lambdalisue/jupyter-vim-binding vim_binding
 
-RUN jupyter contrib nbextension install --user      \
- && jupyter nbextensions_configurator enable --user \
- && jupyter nbextension enable vim_binding/vim_binding
+RUN jupyter contrib nbextension install --user                        \
+ && jupyter nbextensions_configurator enable --user                   \
+ && jupyter nbextension enable vim_binding/vim_binding                \
+ && python -m bash_kernel.install
 
 COPY files/vim_binding.css /home/application/.local/share/jupyter/nbextensions/vim_binding/vim_binding.css
 
