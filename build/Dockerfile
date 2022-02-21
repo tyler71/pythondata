@@ -12,6 +12,7 @@ RUN apt-get update                               \
 RUN useradd --system --create-home --home-dir /home/application --shell /bin/bash \
       --gid root --uid 1000 application
 
+RUN python -m pip install --upgrade pip
 
 RUN pip install jupyter_contrib_nbextensions \
                 jupyterthemes
