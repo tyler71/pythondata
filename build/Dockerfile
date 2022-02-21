@@ -1,4 +1,4 @@
-FROM python
+FROM python:3.10
 
 RUN apt-get update                               \
  && apt-get install -y sqlite3                   \
@@ -24,7 +24,7 @@ RUN chown application -R /usr/local/share/jupyter/lab
 USER application
 
 RUN mkdir -p $(jupyter --data-dir)/nbextensions \
- && cd $(jupyter --data-dir)/nbextensions \
+ && cd $(jupyter --data-dir)/nbextensions       \
  && git clone --depth=1 https://github.com/lambdalisue/jupyter-vim-binding vim_binding
 
 RUN jupyter contrib nbextension install --user                        \
