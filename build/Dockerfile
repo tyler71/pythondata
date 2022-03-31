@@ -7,6 +7,7 @@ RUN apt-get update                               \
                        texlive-plain-generic     \
                        nodejs                    \
                        npm                       \
+                       jq                        \
  && rm -r /var/lib/apt/lists/*
 
 RUN useradd --system --create-home --home-dir /home/application --shell /bin/bash \
