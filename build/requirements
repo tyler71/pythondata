@@ -11,6 +11,7 @@ nbconvert
 nodejs
 numba
 numpy
+openpyxl
 pandas
 scipy
 scrapy
