@@ -7,6 +7,7 @@ RUN apt-get update                               \
                        texlive-plain-generic     \
                        nodejs                    \
                        npm                       \
+                       pandoc                    \
                        jq                        \
  && rm -r /var/lib/apt/lists/*
 
