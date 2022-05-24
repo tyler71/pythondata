@@ -13,6 +13,7 @@ numba
 numpy
 openpyxl
 pandas
+pandoc
 scipy
 scrapy
 vega_datasets
