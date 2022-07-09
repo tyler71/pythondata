@@ -24,7 +24,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Login to personal docker repo
         uses: docker/login-action@v1
         with:
@@ -43,7 +43,7 @@ jobs:
           tags: |
             ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}:latest
             ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}:${{ steps.v.outputs.date }}
-            ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}:build_${{ github.run_number }}
             ${{ secrets.PERSONAL_DOCKER_REPO }}/server/${{ github.event.repository.name }}:${{ steps.v.outputs.date }}
+#           ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}:build_${{ github.run_number }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
