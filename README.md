@@ -1,0 +1,23 @@
+This is a monolithic, full featured jupyter-notebook server.
+All needed packages ready to use for any problem 😁️
+
+```bash
+docker pull ghcr.io/tyler71/pythondata:latest
+```
+
+Some things included:
+
+- Dark themes
+- Scientific packages
+- Bash kernel
+
+For a new install, this command needs to be run in the container to fix a theme issue
+
+```bash
+docker-compose exec pythondata jt -t onedork -vim
+```
+
+## Reverse proxy
+
+Routes to port `8888`
+
