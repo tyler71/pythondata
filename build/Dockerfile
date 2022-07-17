@@ -14,10 +14,13 @@ RUN apt-get update                               \
 RUN useradd --system --create-home --home-dir /home/application --shell /bin/bash \
       --gid root --uid 1000 application
 
-RUN python -m pip install --upgrade pip
+RUN python -m pip install --no-cache-dir --upgrade pip
 
-RUN pip install jupyter_contrib_nbextensions \
-                jupyterthemes
+RUN python -m pip install --no-cache-dir \
+     jupyter_contrib_nbextensions        \
+     jupyter_nbextensions_configurator   \
+     jupyterthemes                       \
+ && jupyter contrib nbextension install
 
 COPY ./requirements .
 RUN python -m pip install --no-cache-dir -r requirements
