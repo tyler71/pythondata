@@ -5,11 +5,15 @@ All needed packages ready to use for any problem 😁️
 docker pull ghcr.io/tyler71/pythondata:latest
 ```
 
-Some things included:
+What is included:
 
 - Dark themes
 - Scientific packages
-- Bash kernel
+
+Kernels
+- Bash
+- Javascript
+- Golang
 
 For a new install, this command needs to be run in the container to fix a theme issue
 
