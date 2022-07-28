@@ -33,13 +33,6 @@ RUN npm install -g ijavascript \
 COPY --from=golang:1.16-alpine /usr/local/go/ /usr/local/go/
 ENV PATH="/usr/local/go/bin:${PATH}"
 ENV GOPATH="/go"
-
-COPY ./requirements .
-RUN python -m pip install --no-cache-dir -r requirements
-
-RUN chown application -R /usr/local/share/jupyter/lab
-
-# Go kernel
 RUN ( \
   mkdir -p "$(go env GOPATH)"/src/github.com/gopherdata                                   \
   && cd "$(go env GOPATH)"/src/github.com/gopherdata                                      \
@@ -54,6 +47,11 @@ RUN ( \
   && sed "s|gophernotes|$(go env GOPATH)/bin/gophernotes|" < kernel.json.in > kernel.json \
   )
 RUN chown -R application /home/application
+
+COPY ./requirements .
+RUN python -m pip install --no-cache-dir -r requirements
+
+RUN chown application -R /usr/local/share/jupyter/lab
 
 USER application
 
