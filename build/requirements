@@ -7,6 +7,7 @@ ipython
 jinja2
 jupyter-book
 jupyterlab
+jupyter-server==1.18.1
 nbconvert
 nodejs
 numba

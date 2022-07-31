@@ -24,7 +24,7 @@ RUN python -m pip install --no-cache-dir \
      jupyter_nbextensions_configurator   \
      jupyterthemes                       \
  && jupyter contrib nbextension install
- 
+
 # Javascript kernel
 RUN npm install -g ijavascript \
  && ijsinstall --install=global --spec-path=full
