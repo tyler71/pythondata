@@ -1,4 +1,4 @@
-This is a monolithic, full featured jupyter-notebook server.
+This is a monolithic, full featured [jupyter-notebook](https://pypi.org/project/jupyter-server/#history) server.
 All needed packages ready to use for any problem 😁️
 
 ```bash
