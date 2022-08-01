@@ -7,7 +7,6 @@ duckdb
 faker
 ipython
 jinja2
-jupyter-book
 jupyter-server==1.18.1
 jupyterlab
 matplotlib
