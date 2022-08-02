@@ -6,6 +6,7 @@ boto3
 duckdb
 faker
 ipython
+ipywidgets
 jinja2
 jupyter-server==1.18.1
 jupyterlab
