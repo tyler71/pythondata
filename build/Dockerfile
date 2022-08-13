@@ -10,6 +10,7 @@ RUN apt-get update                               \
                        npm                       \
                        pandoc                    \
                        jq                        \
+                       ripgrep                   \
  && rm -r /var/lib/apt/lists/*
 # musl = Golang
 
