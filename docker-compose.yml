@@ -11,9 +11,9 @@ services:
       - "./data/extensions:/usr/local/share/jupyter/lab/extensions"
       - "./data/config:/home/application/.jupyter"
     networks:
-      - caddy
+      - public
 # Bad vim theme needs this command: jt -t onedork -vim
 
 networks:
-  caddy:
+  public:
     external: true
