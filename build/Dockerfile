@@ -27,8 +27,8 @@ RUN python -m pip install --no-cache-dir \
  && jupyter contrib nbextension install
 
 # Javascript kernel
-RUN npm install -g ijavascript \
- && ijsinstall --install=global --spec-path=full
+# RUN npm install -g ijavascript \
+#  && ijsinstall --install=global --spec-path=full
 
 # Go kernel
 COPY --from=golang:1.16-alpine /usr/local/go/ /usr/local/go/
