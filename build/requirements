@@ -21,6 +21,7 @@ pillow
 requests
 scipy
 scrapy
+sqlalchemy
 vega_datasets
 qrcode-artistic
 segno
