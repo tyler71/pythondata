@@ -26,3 +26,4 @@ vega_datasets
 qrcode-artistic
 segno
 stripe
+cachetools
