@@ -27,3 +27,4 @@ qrcode-artistic
 segno
 stripe
 cachetools
+python-dotenv
