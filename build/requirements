@@ -29,4 +29,4 @@ segno
 stripe
 cachetools
 python-dotenv
-jwt
+python_jwt
