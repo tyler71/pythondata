@@ -15,6 +15,7 @@ nbconvert
 nodejs
 numba
 numpy
+openai
 openpyxl
 pandas
 pillow
