@@ -30,3 +30,4 @@ stripe
 cachetools
 python-dotenv
 python_jwt
+paho-mqtt
