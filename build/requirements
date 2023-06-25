@@ -10,6 +10,7 @@ ipywidgets
 jinja2
 jupyter-server==1.18.1
 jupyterlab
+jwt
 matplotlib
 nbconvert
 nodejs
