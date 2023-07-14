@@ -24,6 +24,7 @@ requests
 scipy
 scrapy
 sqlalchemy
+psycopg2
 vega_datasets
 qrcode-artistic
 segno
