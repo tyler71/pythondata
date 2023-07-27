@@ -20,11 +20,11 @@ RUN useradd --system --create-home --home-dir /home/application --shell /bin/bas
 
 RUN python -m pip install --no-cache-dir --upgrade pip
 
-RUN python -m pip install --no-cache-dir \
-     jupyter_contrib_nbextensions        \
-     jupyter_nbextensions_configurator   \
-     jupyterthemes                       \
- && jupyter contrib nbextension install
+#RUN python -m pip install --no-cache-dir \
+#     jupyter_contrib_nbextensions        \
+#     jupyter_nbextensions_configurator   \
+#     jupyterthemes                       \
+# && jupyter contrib nbextension install
 
 # Javascript kernel
 # RUN npm install -g ijavascript \
