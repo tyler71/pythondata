@@ -8,7 +8,8 @@ faker
 ipython
 ipywidgets
 jinja2
-jupyter-server==1.18.1
+jupyter-server==2.7.0
+jupyter_collaboration
 jupyterlab
 jwt
 matplotlib
