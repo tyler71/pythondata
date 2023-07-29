@@ -63,7 +63,7 @@ USER application
 #RUN jupyter contrib nbextension install --user                        \
 # && jupyter nbextensions_configurator enable --user                   \
 # && jupyter nbextension enable vim_binding/vim_binding                \
-# && python -m bash_kernel.install
+RUN python -m bash_kernel.install
 
 #COPY files/vim_binding.css /home/application/.local/share/jupyter/nbextensions/vim_binding/vim_binding.css
 
