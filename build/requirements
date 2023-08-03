@@ -11,6 +11,7 @@ jinja2
 jupyter-server==2.7.0
 jupyter_collaboration
 jupyterlab
+ipython-sql
 jupyterlab-vim
 jwt
 matplotlib
