@@ -6,6 +6,7 @@ bloxs
 boto3
 duckdb
 faker
+flask
 ipython
 ipywidgets
 jinja2
