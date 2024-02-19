@@ -25,6 +25,7 @@ openai
 openpyxl
 pandas
 pillow
+redis
 requests
 scipy
 scrapy
