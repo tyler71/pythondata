@@ -27,6 +27,7 @@ pandas
 pillow
 redis
 requests
+sortedcontainers
 scipy
 scrapy
 sqlalchemy
