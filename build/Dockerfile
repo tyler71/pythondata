@@ -64,7 +64,7 @@ USER application
 # && jupyter nbextensions_configurator enable --user                   \
 # && jupyter nbextension enable vim_binding/vim_binding                \
 RUN python -m bash_kernel.install
-RUN tslab install
+#RUN tslab install
 
 #COPY files/vim_binding.css /home/application/.local/share/jupyter/nbextensions/vim_binding/vim_binding.css
 
