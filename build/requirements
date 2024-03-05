@@ -4,6 +4,7 @@ beautifulsoup4
 big-o
 bloxs
 boto3
+dacite
 duckdb
 faker
 flask
