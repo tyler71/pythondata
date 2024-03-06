@@ -4,6 +4,7 @@ beautifulsoup4
 big-o
 bloxs
 boto3
+dateparser
 dacite
 duckdb
 faker
