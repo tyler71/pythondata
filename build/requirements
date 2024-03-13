@@ -14,7 +14,7 @@ ipywidgets
 jinja2
 jupyter-server==2.7.0
 jupyter_collaboration
-jupyterlab
+jupyterlab==4.1.4
 ipython-sql
 jupyterlab-vim
 jwt
