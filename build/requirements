@@ -9,6 +9,7 @@ dacite
 duckdb
 faker
 flask
+tensorflow
 ipython
 ipywidgets
 jinja2
