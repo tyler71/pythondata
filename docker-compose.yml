@@ -6,6 +6,8 @@ services:
     labels:
       caddy: ${hostname}
       caddy.reverse_proxy: "{{ upstreams 8888 }}"
+    ports:
+      - 8888:8888
     volumes:
       - "./data/stored_files:/home/application/data"
       - "./data/extensions:/usr/local/share/jupyter/lab/extensions"
